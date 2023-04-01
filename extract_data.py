@@ -1,6 +1,6 @@
 import requests
-import re
 from bs4 import BeautifulSoup
+import re
 import csv
 
 url = 'https://en.wikipedia.org/wiki/IPhone'
@@ -26,7 +26,8 @@ for row in rows:
             iphone_price_dict[version] = price
     except:
         pass
-print(iphone_price_dict)
+
+# print(iphone_price_dict)
 csv_fields = ['version', 'price']
 
 with open('iphone_price.csv', 'w', newline='') as csvFile:
